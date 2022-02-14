@@ -42,25 +42,18 @@ axios
           req.params['name'] +
           ' ist das ' +
           reponse.data.order +
-          'ste Pokemon.</p>' +
+          '. Pokemon.</p>' +
           htmlFoot
-      );
-  
-  '"><p>' +
-  req.params ['weight'] +
-  'ist'+
-  response.data.order+
-  'schwer.</p>' +
-htmlFoot
+        
+          req.params['name'] +
+          ' ist ' +
+          response.data.weight +
+          'g schwer und ' +
+          response.data.height +
+          'cm groß.</p>' +
+          htmlFoot
 
-'"><p>' +
-  req.params ['height'] +
-  'ist'+
-  response.data.order+
-  'groß.</p>' +
-htmlFoot
-
-
+          );
 }).catch(error => {
   console.log(error)
   res.send(error)
